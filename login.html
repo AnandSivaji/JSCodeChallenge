@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="styles/app.css"/>
+		<link type="text/css" rel="stylesheet" href="styles/profile.css"/>
+	</head>
+	<body>
+
+		<div class="jcc-header-section">
+			
+			<div class="jcc-header-content jcc-book-icon">
+				<div class="jcc-book-text">
+					Mean Book
+				</div>
+			</div>
+
+			<form name="login" class="jcc-header-content jcc-login-user">
+				<div class="jcc-field-container">
+					Username:
+					<input type="text" name="username" placeholder="Username" onkeyup="Login.clearInvalid()" value="anand"/>
+					<label class="jcc-err-msg" id="userErrorMsg" hidden></label>
+				</div>
+
+				<div class="jcc-field-container">
+					Password:
+					<input type="password" name="password" placeholder="Password" onkeyup="Login.clearInvalid()" value="sivaji27"/>
+					<label class="jcc-err-msg" id="passErrorMsg" hidden></label>
+				</div>
+
+				<div class="jcc-field-container jcc-field-container-submit">
+					<input type="button" value="Sign In" onclick="Login.onSignInClicked()"/>
+				</div>
+			</form>
+		</div>
+
+		<div class="jcc-content-section ">
+			<div class="jcc-welcome-page"></div>
+		</div>
+
+		<div class="jcc-footer-section">
+			&copy; www.meanstack.com
+		</div>
+		
+		<script src="js/login.js"></script>
+	</body>
+</html>
