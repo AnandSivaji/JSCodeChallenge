@@ -1,3 +1,4 @@
+"use strict";
 var ProfileService = (function() {
 
 	return {
