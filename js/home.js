@@ -38,7 +38,7 @@ var Home = (function() {
 			
 			feed.id = +new Date();
 			feed.type = isUrl ? 'URL' : 'TYPE';
-			feed.date = +new Date();
+			feed.date = new Date();
 			
 			FeedService.createFeed(feed);
 			inputField.value = '';

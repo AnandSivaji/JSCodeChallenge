@@ -3,9 +3,10 @@
 
 	<head>
 		<link type="text/css" rel="stylesheet" href="../styles/app.css"/>
-		<link type="text/css" rel="stylesheet" href="../styles/profile.css"/>
 		<link type="text/css" rel="stylesheet" href="../styles/feed.css"/>
+		<link type="text/css" rel="stylesheet" href="../styles/profile.css"/>
 	</head>
+	
 	<body>
 
 		<div class="jcc-header-section">
@@ -45,8 +46,57 @@
 					<ul class="jcc-feed-list"></ul>
 				</div>
 				
-				<div class="jcc-profile-section"></div>
-			</div>
+				<div class="jcc-profile-section">
+					<form name="profile">
+						<div>
+							<label for="name">Name:</label>
+							<input type="text" name="name" id="name" onkeyup="ProfileService.onNameFieldChange()"
+																	 onblur="ProfileService.onNameFieldChange()"/>
+							<label class="jcc-profile-required">*</label>
+							<label id="nameErrMsg" class="jcc-profile-error" hidden>&nbsp;</label>
+						</div>
+
+						<div>
+							<label for="age">Age:</label>
+							<input type="text" name="age" id="age" onkeyup="ProfileService.onAgeFieldChange()" 
+																  onblur="ProfileService.onAgeFieldChange()"/>
+							<label class="jcc-profile-required">*</label>
+							<label id="ageErrMsg" class="jcc-profile-error" hidden>&nbsp;</label>
+						</div>
+
+						<div>
+							<label for="phone">Phone:</label>
+							<input type="text" name="phone" id="phone" onkeyup="ProfileService.onPhoneFieldChange()"
+																	   onblur="ProfileService.onPhoneFieldChange()"/>
+							<label class="jcc-profile-required">*</label>
+							<label id="phoneErrMsg" class="jcc-profile-error" hidden>&nbsp;</label>
+						</div>
+
+						<div>
+							<label for="email">Email:</label>
+							<input type="text" name="email" id="email" onkeyup="ProfileService.onEmailFieldChange()"
+																	   onblur="ProfileService.onEmailFieldChange()" />
+							<label class="jcc-profile-required">*</label>
+							<label id="emailErrMsg" class="jcc-profile-error" hidden>&nbsp;</label>
+						</div>
+
+						<div>
+							<label>Address:</label>
+							<textarea id="address"></textarea>
+						</div>
+
+						<div>
+							<label>&nbsp;</label>
+							<input type="file" name="profile" id="profilePic" onchange="ProfileService.onFileUpload(this)"/>
+						</div>
+						
+						<div>
+							<input id="savebutton" type="button" name="save" value="Save" disabled onclick="ProfileService.saveProfile()"/>
+						</div>
+					</form>
+					<img id="profileImage"/>
+				</div>
+				</div>
 		</div>
 
 		<div class="jcc-footer-section">&copy; www.meanstack.com</div>
@@ -54,6 +104,8 @@
 		<script src="../js/Overrides.js"></script>
 		<script src="../js/Feed/Feed.js"></script>
 		<script src="../js/Feed/FeedService.js"></script>
+		<script src="../js/Profile/Profile.js"></script>
+		<script src="../js/Profile/ProfileService.js"></script>
 		<script src="../js/login.js"></script>
 		<script src="../js/home.js"></script>
 	</body>

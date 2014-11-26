@@ -74,7 +74,7 @@ var FeedService = (function() {
 			
 			var feedDate = document.createElement('div');
 			feedDate.setAttribute('class', 'jcc-feed-date');
-			feedDate.innerHTML = feed.getDate();
+			feedDate.innerHTML = feed.getDate().format();
 			
 			content.appendChild(deleteButtonContainer);
 			content.appendChild(feedContent);
